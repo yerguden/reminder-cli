@@ -3,6 +3,8 @@ defmodule ReminderCli do
   Documentation for `ReminderCli`.
   """
 
+  alias ReminderCli.Topics
+
   @doc """
   Hello world.
 
