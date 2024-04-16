@@ -13,7 +13,13 @@ defmodule ReminderCli.Topic do
   end
 
   def from_file_name(file_name) do
-    %Topic{name: file_name}
+    %Topic{
+      name: file_name,
+      last_revised: nil,
+      revision_count: 0,
+      # For the lack of a better option lets set next revision to next day if we are going by file name 
+      next_revision: Date.add(Date.utc_today(), 1)
+    }
   end
 
   def name(%Topic{name: name}) do
