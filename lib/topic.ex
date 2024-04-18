@@ -12,7 +12,7 @@ defmodule ReminderCli.Topic do
     %Topic{topic | next_revision: Date.add(topic.last_revised, 30)}
   end
 
-  def from_file_name(file_name) do
+  def from_name(file_name) do
     %Topic{
       name: file_name,
       last_revised: nil,
