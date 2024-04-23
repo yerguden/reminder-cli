@@ -1,0 +1,10 @@
+{
+  "topics": [
+    {
+      "name": "Topic 1",
+      "last_revised": "2017-01-01",
+      "revision_count": 5,
+      "next_revision": "2017-02-01"
+    }
+  ]
+}

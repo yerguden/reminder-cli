@@ -4,6 +4,13 @@ defmodule ReminderCli.Topics do
   """
   alias ReminderCli.Topic
 
+  def from_config_file(file_name) do
+    File.read!(file_name)
+    |> Poison.decode!()
+    |> Map.get("topics")
+    |> Enum.map(fn file_name -> Topic.from_name(file_name) end)
+  end
+
   def list_topics!(root_path) do
     root_path
     |> File.ls!()
